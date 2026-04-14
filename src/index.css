@@ -1,0 +1,131 @@
+:root {
+  --bg-deep: #050508;
+  --bg-canvas: #08080c;
+  --bg-elevated: rgba(18, 18, 24, 0.72);
+  --bg-elevated-solid: #121218;
+  --bg-muted: rgba(28, 28, 38, 0.85);
+  --bg-card: linear-gradient(
+    145deg,
+    rgba(32, 32, 44, 0.9) 0%,
+    rgba(20, 20, 28, 0.95) 100%
+  );
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-glow: rgba(139, 92, 246, 0.25);
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --text-primary: #f8fafc;
+  --text-secondary: #a8b0c4;
+  --text-tertiary: #6b7289;
+  --accent: #7c6cf0;
+  --accent-bright: #9d8fff;
+  --accent-dim: rgba(124, 108, 240, 0.15);
+  --accent-glow: rgba(124, 108, 240, 0.45);
+  --violet: #a855f7;
+  --cyan: #22d3ee;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --font: 'Inter', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', var(--font);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 40px rgba(124, 108, 240, 0.12);
+  --blur-glass: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--bg-deep);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -30%, rgba(124, 108, 240, 0.18), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 100% 0%, rgba(34, 211, 238, 0.06), transparent 45%),
+    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(168, 85, 247, 0.08), transparent 50%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 13px;
+}
+
+/* React Flow */
+.react-flow__background {
+  background: transparent !important;
+}
+
+.react-flow__controls {
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-md) !important;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm), 0 0 0 1px rgba(255, 255, 255, 0.03) inset !important;
+  backdrop-filter: blur(var(--blur-glass));
+  background: var(--bg-elevated) !important;
+}
+
+.react-flow__controls-button {
+  background: transparent !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  fill: var(--text-secondary) !important;
+}
+
+.react-flow__controls-button:hover {
+  background: var(--accent-dim) !important;
+  fill: var(--accent-bright) !important;
+}
+
+.react-flow__minimap {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(var(--blur-glass));
+}
+
+.react-flow__edge-path {
+  stroke: var(--accent-bright) !important;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 8px rgba(124, 108, 240, 0.4));
+}
+
+.react-flow__connectionline {
+  stroke: var(--accent-bright);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
+/* Gradient brand cubes (splash, login hero, topbar) */
+.brand-robot-icon {
+  display: block;
+  width: 58%;
+  height: 58%;
+  max-width: 30px;
+  max-height: 30px;
+  color: #fff;
+}
